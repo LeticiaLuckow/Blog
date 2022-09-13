@@ -2,7 +2,6 @@ import { Whatsapp } from '@styled-icons/bootstrap';
 import { Mail } from '@styled-icons/material-outlined';
 import { Linkedin } from 'styled-icons/bootstrap';
 import { Github } from 'styled-icons/bootstrap';
-
 import Footer from '../Footer/Footer';
 import { ContactDiv, DivInfo, MediaContact } from './styles';
 
@@ -13,7 +12,7 @@ const Contact = () => {
         <h1
           style={{ textAlign: 'center', width: '100%', marginBottom: '60px' }}
         >
-          Contato
+          Contact
         </h1>
         <MediaContact>
           <Footer

@@ -8,9 +8,9 @@ import Title from '../Components/Title/Title';
 const Home: NextPage = () => {
   return (
     <div>
-      <Header />
+      <Header showMenu />
       <Title texto="Lv Blog" />
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'center' }} id="posts">
         <Post
           date="01/01/2022"
           description="Lorem ipsum dolor sit amet. Vel omnis ipsa sit possimus commodi

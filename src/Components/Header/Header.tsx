@@ -1,19 +1,28 @@
 import Link from 'next/link';
 import { DivFlex, DivLogo, MenuDiv, SpanDiv } from './styles';
 
-const Header = () => {
+type HeaderType = {
+  showMenu?: boolean;
+};
+const Header = ({ showMenu = false }: HeaderType) => {
   return (
     <DivLogo>
-      <p style={{ fontSize: '36px', margin: 0 }}>Lv B.</p>
+      <Link href="/">
+        <p style={{ fontSize: '36px', margin: 0, cursor: 'pointer' }}>Lv B.</p>
+      </Link>
       <DivFlex>
         <MenuDiv>
-          <SpanDiv>
-            <Link href="#sobre">About</Link>
-          </SpanDiv>
+          {showMenu && (
+            <>
+              <SpanDiv>
+                <Link href="#sobre">About</Link>
+              </SpanDiv>
 
-          <SpanDiv>
-            <Link href="#posts">Posts</Link>
-          </SpanDiv>
+              <SpanDiv>
+                <Link href="#posts">Posts</Link>
+              </SpanDiv>
+            </>
+          )}
 
           <SpanDiv>
             <Link href="#contato">Contact</Link>
