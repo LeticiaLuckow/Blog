@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             date={post.attributes.DatePost}
             description={post.attributes.ShortDescription}
             img={post.attributes.Image}
-            link=""
+            link={`/PostPage/${post.id}`}
             title={post.attributes.Title}
           />
         ))}

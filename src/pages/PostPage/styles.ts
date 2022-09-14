@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-const PostImg = styled.img`
+const PostImgTwo = styled.img`
 width: auto;
 height: auto;
-max-height: 400px;
-max-width: 350px;
+max-height: 600px;
+max-width: 500px;
 }
 `;
 
@@ -16,4 +16,7 @@ padding: 12px 48px;
 }
 `;
 
-export { PostImg, PostDiv };
+const PostP = styled.p`
+  width: 80%;
+`;
+export { PostImgTwo, PostDiv, PostP };

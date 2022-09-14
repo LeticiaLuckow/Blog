@@ -16,42 +16,25 @@ const Contact = () => {
         </h1>
         <MediaContact>
           <Footer
-            icon={
-              <Whatsapp
-                width={30}
-                style={{ marginRight: '8px', color: 'white' }}
-              />
-            }
+            icon={<Whatsapp width={30} style={{ color: 'white' }} />}
             title="Whatsapp"
             subtitle="(41) 9 9944-4862"
             link="https://wa.me/5541999444862"
           />
           <Footer
-            icon={
-              <Mail width={30} style={{ marginRight: '8px', color: 'white' }} />
-            }
+            icon={<Mail width={30} style={{ color: 'white' }} />}
             title="E-mail"
             subtitle="leticia.villasboas99@gmail.com"
             link="https://mail.google.com/mail/u/0/#inbox?compose=new"
           />
           <Footer
-            icon={
-              <Linkedin
-                width={30}
-                style={{ marginRight: '8px', color: 'white' }}
-              />
-            }
+            icon={<Linkedin width={30} style={{ color: 'white' }} />}
             title="Linkedin"
             subtitle="leticia-luckow"
             link="https://www.linkedin.com/in/leticia-luckow/"
           />
           <Footer
-            icon={
-              <Github
-                width={30}
-                style={{ marginRight: '8px', color: 'white' }}
-              />
-            }
+            icon={<Github width={30} style={{ color: 'white' }} />}
             title="Github"
             subtitle="LeticiaLuckow"
             link="https://github.com/LeticiaLuckow"

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const PostCard = styled.div`
   width: 600px;
+  margin-bottom: 42px;
 `;
 
 const TitleP = styled.p`
@@ -14,8 +15,7 @@ const TitleP = styled.p`
 const PostImg = styled.img`
 width: auto;
 height: auto;
-max-height: 400px;
-max-width: 350px;
+width: 100%;
 }
 `;
 export { TitleP, PostCard, PostImg };
