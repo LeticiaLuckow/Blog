@@ -6,15 +6,26 @@ import Title from '../../../Components/Title/Title';
 import { PostType } from '../../../Types/post';
 import { useEffect, useState } from 'react';
 import { TablePost, TdPost, ThPost } from './styles';
+import { useRouter } from 'next/router';
 
 const MenagePosts: NextPage = () => {
   const [posts, setPosts] = useState<PostType[]>([]);
+
+  const router = useRouter();
+
   useEffect(() => {
     axios.get('http://localhost:1337/api/titles').then((response) => {
       console.log(response.data.data);
       setPosts(response.data.data);
     });
   }, []);
+
+  const onDelete = (id: number) => {
+    console.log(id);
+    axios.delete(`http://localhost:1337/api/titles/${id}`).then(() => {
+      router.reload();
+    });
+  };
 
   return (
     <div>
@@ -37,9 +48,10 @@ const MenagePosts: NextPage = () => {
             {posts.map((post) => (
               <tr>
                 <TdPost>{post.id}</TdPost>
+
                 <TdPost>{post.attributes.Title}</TdPost>
                 <TdPost>
-                  <button>x</button>
+                  <button onClick={() => onDelete(post.id)}>x</button>
                 </TdPost>
               </tr>
             ))}
