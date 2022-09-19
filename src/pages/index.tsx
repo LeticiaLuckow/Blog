@@ -7,14 +7,11 @@ import Title from '../Components/Title/Title';
 import axios from 'axios';
 import { PostType } from '../Types/post';
 
-const Home: NextPage = () => {
-  const [posts, setPosts] = useState<PostType[]>([]);
-  useEffect(() => {
-    axios.get('http://localhost:1337/api/titles').then((response) => {
-      console.log(response.data.data);
-      setPosts(response.data.data);
-    });
-  }, []);
+type HomeType = {
+  posts: PostType[];
+};
+
+const Home: NextPage<HomeType> = ({ posts }) => {
   return (
     <div>
       <Header showMenu />
@@ -41,6 +38,13 @@ const Home: NextPage = () => {
       <Contact />
     </div>
   );
+};
+
+//SSR
+Home.getInitialProps = async () => {
+  const res = await axios.get('http://localhost:1337/api/titles');
+
+  return { posts: res.data.data };
 };
 
 export default Home;
