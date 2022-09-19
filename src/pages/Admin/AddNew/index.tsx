@@ -11,7 +11,7 @@ import {
   OutsideDiv,
   PostDiv,
   PostImg,
-} from './styles';
+} from '../../../styles/addnew';
 
 const AddNew: NextPage = () => {
   const [title, setTitle] = useState('');

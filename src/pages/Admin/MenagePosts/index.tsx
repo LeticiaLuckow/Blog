@@ -5,7 +5,7 @@ import Header from '../../../Components/Header/Header';
 import Title from '../../../Components/Title/Title';
 import { PostType } from '../../../Types/post';
 import { useEffect, useState } from 'react';
-import { TablePost, TdPost, ThPost } from './styles';
+import { TablePost, TdPost, ThPost } from '../../../styles/menagePosts';
 import { useRouter } from 'next/router';
 
 const MenagePosts: NextPage = () => {

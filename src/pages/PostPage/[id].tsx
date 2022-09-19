@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Contact from '../../Components/Contact/Contact';
 import Header from '../../Components/Header/Header';
 import Title from '../../Components/Title/Title';
-import { PostDiv, PostImgTwo, PostP } from './styles';
+import { PostDiv, PostImgTwo, PostP } from '../../styles/PostPage';
 import axios from 'axios';
 import { PostType } from '../../Types/post';
 
