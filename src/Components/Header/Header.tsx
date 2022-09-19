@@ -15,12 +15,10 @@ const Header = ({ showMenu = false }: HeaderType) => {
           {showMenu && (
             <>
               <SpanDiv>
-                <Link href="http://localhost:3000/Admin/AddNew">New Post</Link>
+                <Link href="/Admin/AddNew">New Post</Link>
               </SpanDiv>
               <SpanDiv>
-                <Link href="http://localhost:3000/Admin/MenagePosts">
-                  Delete Post
-                </Link>
+                <Link href="/Admin/MenagePosts">Delete Post</Link>
               </SpanDiv>
 
               <SpanDiv>

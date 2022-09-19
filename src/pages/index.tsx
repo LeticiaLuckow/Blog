@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
 import Contact from '../Components/Contact/Contact';
 import Header from '../Components/Header/Header';
 import Post from '../Components/Post/Post';
@@ -42,7 +41,9 @@ const Home: NextPage<HomeType> = ({ posts }) => {
 
 //SSR
 Home.getInitialProps = async () => {
-  const res = await axios.get('http://localhost:1337/api/titles');
+  const res = await axios.get(
+    'https://glacial-retreat-73940.herokuapp.com/api/titles',
+  );
 
   return { posts: res.data.data };
 };

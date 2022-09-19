@@ -16,6 +16,7 @@ const MediaContact = styled.div`
   width: 100%;
   justify-content: space-around;
   flex-direction: row;
+
   @media only screen and (max-width: 600px) {
     flex-direction: column;
   }

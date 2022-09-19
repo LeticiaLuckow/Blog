@@ -4,7 +4,14 @@ import { useState } from 'react';
 import Contact from '../../../Components/Contact/Contact';
 import Header from '../../../Components/Header/Header';
 import Title from '../../../Components/Title/Title';
-import { FormDiv, FormInput, FormText, PostDiv, PostImg } from './styles';
+import {
+  FormDiv,
+  FormInput,
+  FormText,
+  OutsideDiv,
+  PostDiv,
+  PostImg,
+} from './styles';
 
 const AddNew: NextPage = () => {
   const [title, setTitle] = useState('');
@@ -35,7 +42,9 @@ const AddNew: NextPage = () => {
     } else {
       setError(false);
       axios
-        .post('http://localhost:1337/api/titles', { data })
+        .post('https://glacial-retreat-73940.herokuapp.com/api/titles', {
+          data,
+        })
         .then((response) => {
           console.log(response.data.data);
           alert('post added');
@@ -53,7 +62,7 @@ const AddNew: NextPage = () => {
 
         <PostDiv>
           <PostImg src={imageUrl} alt="" />
-          <div style={{ width: '600px' }}>
+          <OutsideDiv>
             <form onSubmit={submit}>
               <FormDiv>
                 <label>Title</label>
@@ -94,7 +103,7 @@ const AddNew: NextPage = () => {
                 <button type="submit">Submit</button>
               </FormDiv>
             </form>
-          </div>
+          </OutsideDiv>
         </PostDiv>
       </div>
       <Contact />

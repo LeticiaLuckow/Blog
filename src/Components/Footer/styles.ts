@@ -6,6 +6,9 @@ const FooterBoxDiv = styled.a`
   align-items: center;
   color: black;
   text-decoration: none;
+
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 12px;
   }
 `;
 const SpanTitle = styled.span`

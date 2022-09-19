@@ -3,6 +3,10 @@ import styled from 'styled-components';
 const PostCard = styled.div`
   width: 600px;
   margin-bottom: 42px;
+
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
 `;
 
 const TitleP = styled.p`
