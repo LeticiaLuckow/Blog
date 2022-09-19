@@ -50,7 +50,7 @@ const MenagePosts: NextPage = () => {
 
           <tbody>
             {posts.map((post) => (
-              <tr>
+              <tr key={post.id}>
                 <TdPost>{post.id}</TdPost>
 
                 <TdPost>{post.attributes.Title}</TdPost>

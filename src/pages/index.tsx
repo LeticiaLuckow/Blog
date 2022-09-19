@@ -26,6 +26,7 @@ const Home: NextPage<HomeType> = ({ posts }) => {
       >
         {posts.map((post) => (
           <Post
+            key={post.id}
             date={post.attributes.DatePost}
             description={post.attributes.ShortDescription}
             img={post.attributes.Image}
