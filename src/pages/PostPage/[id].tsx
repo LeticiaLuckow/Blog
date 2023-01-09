@@ -16,12 +16,10 @@ const PostPage: NextPage = () => {
 
   useEffect(() => {
     if (id) {
-      axios
-        .get(`https://glacial-retreat-73940.herokuapp.com/api/titles/${id}`)
-        .then((response) => {
-          console.log(response.data.data);
-          setPost(response.data.data);
-        });
+      axios.get(`http://localhost:1337/api/titles/${id}`).then((response) => {
+        console.log(response.data.data);
+        setPost(response.data.data);
+      });
     }
   }, [id]);
 

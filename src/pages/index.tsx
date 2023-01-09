@@ -5,6 +5,7 @@ import Post from '../Components/Post/Post';
 import Title from '../Components/Title/Title';
 import axios from 'axios';
 import { PostType } from '../Types/post';
+import { TITLES } from '../mocks/titles';
 
 type HomeType = {
   posts: PostType[];
@@ -41,11 +42,13 @@ const Home: NextPage<HomeType> = ({ posts }) => {
 };
 
 //SSR
-Home.getInitialProps = async () => {
-  const res = await axios.get(
-    'https://glacial-retreat-73940.herokuapp.com/api/titles',
-  );
 
+Home.getInitialProps = async () => {
+  let res = TITLES;
+
+  if (process.env.NODE_ENV === 'development') {
+    res = await axios.get('http://localhost:1337/api/titles');
+  }
   return { posts: res.data.data };
 };
 

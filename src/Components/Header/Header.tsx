@@ -12,24 +12,20 @@ const Header = ({ showMenu = false }: HeaderType) => {
       </Link>
       <DivFlex>
         <MenuDiv>
-          {showMenu && (
-            <>
-              <SpanDiv>
-                <Link href="/Admin/AddNew">New Post</Link>
-              </SpanDiv>
-              <SpanDiv>
-                <Link href="/Admin/MenagePosts">Delete Post</Link>
-              </SpanDiv>
-
-              <SpanDiv>
-                <Link href="#posts">Posts</Link>
-              </SpanDiv>
-            </>
-          )}
-
-          <SpanDiv>
-            <Link href="#contato">Contact</Link>
-          </SpanDiv>
+          <>
+            <SpanDiv>
+              <Link href="/">Posts</Link>
+            </SpanDiv>
+            <SpanDiv>
+              <Link href="/Admin/AddNew">New Post</Link>
+            </SpanDiv>
+            <SpanDiv>
+              <Link href="/Admin/MenagePosts">Delete Post</Link>
+            </SpanDiv>
+            <SpanDiv>
+              <Link href="#contato">Contact</Link>
+            </SpanDiv>
+          </>
         </MenuDiv>
       </DivFlex>
     </DivLogo>

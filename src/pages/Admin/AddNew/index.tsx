@@ -42,7 +42,7 @@ const AddNew: NextPage = () => {
     } else {
       setError(false);
       axios
-        .post('https://glacial-retreat-73940.herokuapp.com/api/titles', {
+        .post('http://localhost:1337/api/titles', {
           data,
         })
         .then((response) => {

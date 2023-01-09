@@ -11,7 +11,7 @@ type Post = {
 
 const Post = ({ title, date, img, description, link }: Post) => {
   return (
-    <PostCard>
+    <PostCard id="posts">
       <TitleP>{title}</TitleP>
       <p>
         <b style={{ fontSize: '14px' }}>Posted at {date}</b>
